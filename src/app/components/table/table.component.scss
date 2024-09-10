@@ -1,0 +1,22 @@
+table {
+    width: 100%;
+}
+
+button {
+    background-color: transparent;
+    border: transparent;
+}
+
+table th:first-of-type::before {
+    content: "Number";
+    color: black;
+    position: absolute;
+}
+
+table th:first-of-type {
+    color: transparent;
+}
+
+.mat-mdc-form-field {
+    width: 100%;
+}

@@ -1,27 +1,14 @@
-# ApiteraRecruitmentTask
+## Apitera Recruitment Task
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.2.
+### Wytyczne:
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- przygotuj widok wyświetlający tabelę pierwiastków (kolumny Number, Name, Weight, Symbol) - ✔️ wykonano
+- zasymuluj pobieranie danych do tabeli podczas startu - ✔️ wykonano
+  - symulacje wykonano poprzez dodanie operatora delay z bilbioteki rxjs, za pomocą operatora tap uruchamiamy spinnera a następnie podczas subskrypcji jest on wyłączany; w przypadku, gdyby dane rzeczywiście były pobierane z jakiegoś zewnętrznego api za pomocą http request, wtedy logika spinnera zostałaby obsłużona przez interceptor
+- dodaj możliwość edycji dowolnej wartości rekordu wyświetlonego w tabeli, po zatwierdzeniu zmian, wiersz tabeli powinien się zaktualizować; edycja powinna odbywać się bez mutowaniia danych - ✔️ wykonano
+  - przy każdej wartości mamy ikonkę, po kliknięcia na którą wyskakuje popup z możliwością wpisania nowej wartości, od siebie dorzuciłem małą walidację z wykorzystaniem regexu, tak że dla pól string akceptowane są tylko małe i duże litery a dla pol number integery oraz float (np. 234.423)
+  - dane zmieniają się tylko na poziomie komponentu, nawet w serwisie pozostaje niezmienione
+- dodaj filtr, który pozwoli na filtrowanie wyników (jeden input filtrujący po wszystkich polach), filtrowanie powinno odbywać się po 2s bez zmiany wartości w inpucie - ✔️ wykonano
+  - opóźnienie filtrowania wykonane za pomocą operatora debounceTime z biblioteki rxjs
+- jako bibliotekę do komponentów użyj https://material.angular.io/ - ✔️ wykonano
+- zadanie do napisania w Angular 18.2.2. - ✔️ wykonano

@@ -1,0 +1,15 @@
+<mat-dialog-content>
+    <p>Update value</p>
+    <mat-form-field>
+        <mat-label>new value</mat-label>
+        <input matInput [formControl]="input" />
+        @if (input.invalid) {
+        <mat-error>{{errorMessage}}</mat-error>
+        }
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <button mat-button [mat-dialog-close]="input.value"
+        [disabled]="input.invalid">Confirm</button>
+</mat-dialog-actions>
