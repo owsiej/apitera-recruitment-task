@@ -3,7 +3,8 @@
     <input matInput (keyup)="onFilterInputChange($event)" #input>
 </mat-form-field>
 
-<table mat-table [dataSource]="data">
+<table mat-table *ngIf="elementsDataAsMatTableDataSource$ | async as DS"
+    [dataSource]="DS">
 
     @for(column of tableColumns; track column;) {
     <ng-container matColumnDef="{{column}}">
